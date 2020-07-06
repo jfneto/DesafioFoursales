@@ -1,4 +1,4 @@
-package com.foursales.desafio.models;
+package com.foursales.desafio.securyty.models;
 
 import lombok.Data;
 import lombok.Getter;

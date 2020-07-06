@@ -1,4 +1,4 @@
-package com.foursales.desafio.models;
+package com.foursales.desafio.api.models;
 
 import lombok.*;
 
@@ -16,8 +16,9 @@ public class Cartao {
     @Id
     private int id;
     private String numero;
-    private String ano;
-    private String mes;
+    @Column(name = "mes_ano")
+    private String mesAno;
     private String cvv;
+    private String nome;
 
 }

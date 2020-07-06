@@ -1,4 +1,4 @@
-package com.foursales.desafio.models;
+package com.foursales.desafio.securyty.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
@@ -17,7 +18,10 @@ import javax.persistence.Table;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = -377054823845905036L;
+
     @Id
     @GeneratedValue
     @JsonIgnore
